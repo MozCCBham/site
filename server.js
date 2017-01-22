@@ -1,12 +1,42 @@
 var express = require('express')
 var app = express()
+var nodemailer = require('nodemailer');
+var configMailer = require('./config/mailer.js');
+
+console.log(encodeURIComponent(configMailer.username));
+console.log(configMailer.password);
+
+
+// create reusable transporter object using the default SMTP transport
+var up = 'smtps://' + encodeURIComponent(configMailer.username) +':' + configMailer.password + '@smtp.gmail.com';
+console.log(up);
+
+var transporter = nodemailer.createTransport(up);
+
+var mailOptions = {
+            from: '"worker" < '+ configMailer.username + '>', // sender address
+            to: 'jmtrik@gmail.com', // list of receivers
+            subject: 'Message for MozCCBham ✔', // Subject line
+            text: 'You have been sent an message.', // plaintext body
+            html: '<b>You have been sent an message.</b>' // html body
+          };
+
+console.log(mailOptions);
 
 app.use(express.static('public'))
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
+app.post('/mail', function (req, res) {
+  //res.send('Mail sent')
+  // send mail with defined transport object
+          transporter.sendMail(mailOptions, function(error, info){
+            if(error){
+              return console.log(error);
+            }
+            console.log('Message sent: ' + info.response);
+          });
+
 })
 
 app.listen(8080, function () {
-  console.log('Example app listening on port 8080!')
+  console.log('mozccbham site listening on port 8080!')
 })

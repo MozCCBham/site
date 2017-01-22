@@ -1,0 +1,7 @@
+// mailer.js
+module.exports = {
+
+    'username' : 'mozccbhamworker@gmail.com', // e.g. someone@gmail.com
+    'password' : 'password'  // put the password here, this file is not saved back to git
+
+};

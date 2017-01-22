@@ -38,7 +38,6 @@ Exit su
 git clone https://gitlab.bham.ac.uk/MozCC-Bham/site.git 
 cd site
 npm install
-bower install
 http-server
 ```
 

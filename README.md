@@ -26,8 +26,12 @@ Install git
 
 Install forever
 
-`yum install -y forever`
+`npm install -y forever`
 
+Install gulp
+
+`npm install -g gulp`
+ 
 Exit su
 
 `exit`

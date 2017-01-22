@@ -32,14 +32,25 @@ Exit su
 
 `sudo npm install -g http-server`
 
-## Running the website
+## Installing the site
 
 ```
 git clone https://gitlab.bham.ac.uk/MozCC-Bham/site.git 
 cd site
 npm install
+```
+
+### Running the site
+
+```
+cd site
 http-server
 ```
+
+or to run forever
+
+`forever start $(which http-server ) ~/site/`
+
 
 ## Copyright and License
 

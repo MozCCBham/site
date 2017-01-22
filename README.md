@@ -4,7 +4,7 @@ Uses Node.js
 
 ## Installing on AWS
 
-### Installing/Updating Node.js
+### Installing/Updating Node.js, NPM and Git
 
 `sudo su`
 
@@ -19,6 +19,10 @@ Setup the repo for Node version 6
 Install Node. This will also install npm
 
 `yum install -y nodejs`
+
+Install git
+
+`yum install -y git`
 
 Exit su
 

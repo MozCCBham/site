@@ -24,13 +24,13 @@ Install git
 
 `yum install -y git`
 
+Install forever
+
+`yum install -y forever`
+
 Exit su
 
 `exit`
-
-### Installing http-server
-
-`sudo npm install -g http-server`
 
 ## Installing the site
 
@@ -38,19 +38,19 @@ Exit su
 git clone https://gitlab.bham.ac.uk/MozCC-Bham/site.git 
 cd site
 npm install
+gulp
 ```
 
 ### Running the site
 
 ```
 cd site
-http-server
+node server.js 
 ```
 
 or to run forever
 
-`forever start $(which http-server ) ~/site/`
-
+`forever start --spinSleepTime 1000 server.js`
 
 ## Copyright and License
 

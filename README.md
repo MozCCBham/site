@@ -46,7 +46,7 @@ gulp
 ```
 ### Setting up the mailer
 
-`mv config/mailer.js.template config/mailer.js`
+`cp config/mailer.js.template config/mailer.js`
 
 Update the username and password in the `config/mailer.js` file.
 

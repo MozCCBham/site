@@ -26,7 +26,7 @@ Exit su
 
 ### Installing http-server
 
-`npm install -g http-server`
+`sudo npm install -g http-server`
 
 ## Running the website
 

@@ -25,6 +25,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
   },
   "dependencies": {
+    "body-parser": "1.16.0",
     "express": "4.14.0",
     "gulp": "3.9.1",
     "nodemailer": "2.7.1"
